@@ -1,0 +1,14 @@
+k0nsult-country-pl — K0NSULT national transparency layer (Poland)
+Copyright 2026 K0NSULT / 0n40i4
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+OPEN (Apache-2.0) — the Poland member-state surfaces in surfaces/:
+  panstwo (state), kraj (country), prezydent (president), min-cyfryzacji,
+  ranking-organy (+EN), ranking-jst-kas (+EN).
+This is the REFERENCE IMPLEMENTATION of the K0NSULT per-country layer; other
+  EU member states instantiate the same pattern (see k0nsult-country-template).
+NOT INCLUDED: the proprietary k0nsult.cloud engine (/api/* is the boundary);
+  personal data; secrets/keys (No Password Custody). Public authority contacts
+  in these pages are institutional registry data, not PII.
+
+DOCTRINE: claim <= proof; Human Override Always; agents-not-people.
