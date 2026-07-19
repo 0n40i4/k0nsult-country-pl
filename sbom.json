@@ -2,10 +2,10 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
   "$profile": "cyclonedx-lite (podzbior: bez services/vulnerabilities/compositions)",
-  "serialNumber": "urn:uuid:1f4e6b59-772b-4ced-b088-b6f4914b170a",
+  "serialNumber": "urn:uuid:a4dfe44b-5861-4ebb-baf5-f49c6fd1443f",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-19T20:03:41.181Z",
+    "timestamp": "2026-07-19T20:26:20.617Z",
     "tools": [
       {
         "vendor": "K0NSULT",
@@ -15,8 +15,8 @@
     ],
     "component": {
       "type": "application",
-      "bom-ref": "k0nsult-opensource-surface",
-      "name": "K0NSULT open-source surface (ai-truth / uni0nai / ipIII)",
+      "bom-ref": "k0nsult-country-pl",
+      "name": "k0nsult-country-pl",
       "version": "1.0.0",
       "licenses": [
         {
@@ -28,8 +28,8 @@
     },
     "properties": [
       {
-        "name": "k0nsult:root",
-        "value": "C:/Users/USER/Desktop/K0NSULT-OSS/k0nsult-country-pl"
+        "name": "k0nsult:repo",
+        "value": "k0nsult-country-pl"
       },
       {
         "name": "k0nsult:scope",
@@ -84,7 +84,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "b73451c9269c460c9aaa2f2e4788d0814a7a1c76965f4d559e3634f9ef0666ac"
+          "content": "be1dc167a304da1454c7591a63f7d3da16d2b00b4922692d0011dac24d37a6a8"
         }
       ],
       "properties": [
@@ -94,7 +94,7 @@
         },
         {
           "name": "k0nsult:bytes",
-          "value": "829"
+          "value": "1308"
         },
         {
           "name": "k0nsult:surface",
