@@ -8,7 +8,9 @@ OPEN (Apache-2.0) — the Poland member-state surfaces in surfaces/:
 This is the REFERENCE IMPLEMENTATION of the K0NSULT per-country layer; other
   EU member states instantiate the same pattern (see k0nsult-country-template).
 NOT INCLUDED: the proprietary k0nsult.cloud engine (/api/* is the boundary);
-  secrets/keys (No Password Custody).
+  secrets/keys (No Password Custody); the ipIII evidence-attestation module —
+  a COMMERCIAL product currently for sale, NOT open-sourced and NOT covered by the
+  Apache-2.0 grant here (open-source only conditionally, if unsold — Human Override).
 
 PERSONAL DATA (GDPR/RODO) — honest scope: these transparency surfaces DO name
   public-office holders (e.g. ministers, heads of authorities, the President) in
