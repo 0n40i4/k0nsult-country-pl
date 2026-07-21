@@ -2,10 +2,10 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
   "$profile": "cyclonedx-lite (podzbior: bez services/vulnerabilities/compositions)",
-  "serialNumber": "urn:uuid:8c949d1f-1699-41c3-ac65-df35c2342ea4",
+  "serialNumber": "urn:uuid:83709ef7-519d-42b5-958a-c0c547770d9e",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-20T16:49:46.972Z",
+    "timestamp": "2026-07-21T16:38:50.647Z",
     "tools": [
       {
         "vendor": "K0NSULT",
@@ -45,7 +45,7 @@
       },
       {
         "name": "k0nsult:stats",
-        "value": "{\"total\":13,\"files_html\":8,\"data_json\":0,\"code_files\":0,\"other_files\":5,\"node_libraries\":0}"
+        "value": "{\"total\":15,\"files_html\":8,\"data_json\":0,\"code_files\":0,\"other_files\":7,\"node_libraries\":0}"
       }
     ]
   },
@@ -71,6 +71,70 @@
         {
           "name": "k0nsult:bytes",
           "value": "127"
+        },
+        {
+          "name": "k0nsult:eol",
+          "value": "lf-normalized"
+        },
+        {
+          "name": "k0nsult:surface",
+          "value": "open-source"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "surface:.github/workflows/verify.yml",
+      "name": "verify.yml",
+      "group": "other",
+      "version": "1.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8406b6124728e2d134271756c519ac50ad0f0a76d30bee9960782cb47cc98046"
+        }
+      ],
+      "properties": [
+        {
+          "name": "k0nsult:path",
+          "value": ".github/workflows/verify.yml"
+        },
+        {
+          "name": "k0nsult:bytes",
+          "value": "1546"
+        },
+        {
+          "name": "k0nsult:eol",
+          "value": "lf-normalized"
+        },
+        {
+          "name": "k0nsult:surface",
+          "value": "open-source"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "surface:KNOWN-LIMITATIONS.md",
+      "name": "KNOWN-LIMITATIONS.md",
+      "group": "other",
+      "version": "1.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "62f0a94bbd871c8b56b8ae17b70ea7a4de1c840ef947a7ca8bb52f14ac01e9ca"
+        }
+      ],
+      "properties": [
+        {
+          "name": "k0nsult:path",
+          "value": "KNOWN-LIMITATIONS.md"
+        },
+        {
+          "name": "k0nsult:bytes",
+          "value": "1558"
         },
         {
           "name": "k0nsult:eol",
