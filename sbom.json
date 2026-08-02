@@ -2,10 +2,10 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
   "$profile": "cyclonedx-lite (podzbior: bez services/vulnerabilities/compositions)",
-  "serialNumber": "urn:uuid:83709ef7-519d-42b5-958a-c0c547770d9e",
+  "serialNumber": "urn:uuid:3291e1f4-7f51-4def-9e07-3283f250cb39",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-21T16:38:50.647Z",
+    "timestamp": "2026-08-02T18:32:56.362Z",
     "tools": [
       {
         "vendor": "K0NSULT",
@@ -45,7 +45,7 @@
       },
       {
         "name": "k0nsult:stats",
-        "value": "{\"total\":15,\"files_html\":8,\"data_json\":0,\"code_files\":0,\"other_files\":7,\"node_libraries\":0}"
+        "value": "{\"total\":16,\"files_html\":8,\"data_json\":0,\"code_files\":0,\"other_files\":8,\"node_libraries\":0}"
       }
     ]
   },
@@ -103,6 +103,38 @@
         {
           "name": "k0nsult:bytes",
           "value": "1546"
+        },
+        {
+          "name": "k0nsult:eol",
+          "value": "lf-normalized"
+        },
+        {
+          "name": "k0nsult:surface",
+          "value": "open-source"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "surface:CLAIMS.md",
+      "name": "CLAIMS.md",
+      "group": "other",
+      "version": "1.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a7b115b517d6ab41919f93770a77b0e823fdd726451c52ac21284a09302c6fbb"
+        }
+      ],
+      "properties": [
+        {
+          "name": "k0nsult:path",
+          "value": "CLAIMS.md"
+        },
+        {
+          "name": "k0nsult:bytes",
+          "value": "2485"
         },
         {
           "name": "k0nsult:eol",
