@@ -1,0 +1,38 @@
+#!/bin/sh
+# .githooks/pre-commit — auto-regeneruje sbom.json PRZED kazdym commitem,
+# zeby CI "SBOM must be re-derivable (recompute -> exact match)" nigdy nie
+# wykryl stalego SBOM-u (to byl juz 5. taki incydent w ekosystemie K0NSULT:
+# zmiana pliku bez regeneracji sbom.json -> CI fail dopiero po pushu).
+#
+# Wlaczenie (raz na klon, zero-dependency, bez husky/npm):
+#   git config core.hooksPath .githooks
+#
+# Generator sbom.mjs mieszka w siostrzanym repo k0nsult-tools, sklonowanym
+# OBOK tego repo (ten sam ukland co w .github/workflows/verify.yml):
+#   ../k0nsult-tools/sbom.mjs
+
+set -eu
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+GENERATOR="$REPO_ROOT/../k0nsult-tools/sbom.mjs"
+
+if [ ! -f "$GENERATOR" ]; then
+  echo "pre-commit: UWAGA — brak $GENERATOR (sibling clone k0nsult-tools)." >&2
+  echo "pre-commit: sbom.json NIE zostal automatycznie przeliczony." >&2
+  echo "pre-commit: sklonuj obok: gh repo clone 0n40i4/k0nsult-tools ../k0nsult-tools" >&2
+  echo "pre-commit: albo przelicz recznie: node ../k0nsult-tools/sbom.mjs --root . --out sbom.json" >&2
+  echo "pre-commit: commit KONTYNUOWANY bez regeneracji — CI moze go odrzucic." >&2
+  exit 0
+fi
+
+if ! node "$GENERATOR" --root "$REPO_ROOT" --out "$REPO_ROOT/sbom.json"; then
+  echo "pre-commit: generator SBOM zwrocil blad — commit przerwany." >&2
+  exit 1
+fi
+
+if ! git -C "$REPO_ROOT" diff --quiet -- sbom.json; then
+  git -C "$REPO_ROOT" add "$REPO_ROOT/sbom.json"
+  echo "pre-commit: sbom.json przeliczony na nowo i dodany do commita."
+fi
+
+exit 0
